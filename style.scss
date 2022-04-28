@@ -1,3 +1,252 @@
+@import 'var';
+
+@import url('http://fonts.googleapis.com/css?family=Merriweather:400,700|Robot+Mono');
+
 body{
     height: 100vh;
+    background: $blue;
+    color: white;
+    overflow: hidden;
+    font-family: 'Roboto Mono', monospace;
+}
+h1{
+    padding-top: 20vh;
+    font-size: 8vw;
+    position: relative;
+    text-align: center;
+    font-family: 'Merriweather', serif;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px hsla(100, 0, 30, 0.5);
+    z-index: 1000;
+    margin: 0;
+}
+.fadeIn {
+    opacity: 0;
+    animation: fadeIn 1s 2s ease-in forwards;
+}
+@keyframes fadeIn {
+    100% { opacity: 1; }
+}
+.sun {
+    position: absolute;
+    top: 2rem;
+    left: 3rem;
+    width: 10rem;
+    height: 10rem;
+    background: #F5AB35;
+    border-radius: 50%;
+    box-shadow: 0 0 30px #F39C12;
+}
+.slideIn {
+    transform: translateX(-10rem);
+    animation:  slideIn 5s ease-out forwards;
+}
+@keyframes slideIn {
+    100% { transform: translateX(0); }
+}
+.flower {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+
+    &_head {
+        height: 7rem;
+        width: 7rem;
+        background: $purple;
+        border-radius: 50%;
+    }
+
+    &_stem {
+        width: 0.5rem;
+        height: 20rem;
+        max-height: 10;
+        background: $lightgreen;
+
+        &::after {
+            content:  '';
+            margin-left: 0.5rem;
+            margin-top: 1rem;
+            width: 3em;
+            height: 3em;
+            display: block;
+            background: $darkgreen;
+            border-radius:  2em 0 2em 0em;
+        }
+    }
+}
+.flower2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+
+    &_head {
+        height: 9rem;
+        width: 8rem;
+        background: $yellow;
+        border-radius: 45%;
+    }
+
+    &_stem {
+        width: 0.5rem;
+        height: 20rem;
+        max-height: 10;
+        background: $lightgreen;
+
+        &::after {
+            content:  '';
+            margin-left: 0.5rem;
+            margin-top: 1rem;
+            width: 3em;
+            height: 3em;
+            display: block;
+            background: $darkgreen;
+            border-radius:  2em 0 2em 0em;
+        }
+    }
+}
+.flower3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+
+    &_head {
+        height: 10rem;
+        width: 10rem;
+        background: $white;
+        border-radius: 55%;
+    }
+
+    &_stem {
+        width: 0.5rem;
+        height: 20rem;
+        max-height: 10;
+        background: $lightgreen;
+
+        &::after {
+            content:  '';
+            margin-left: 0.5rem;
+            margin-top: 1rem;
+            width: 3em;
+            height: 3em;
+            display: block;
+            background: $darkgreen;
+            border-radius:  2em 0 2em 0em;
+        }
+    }
+}
+.flower4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+
+    &_head {
+        height: 9rem;
+        width: 9rem;
+        background: $yellow;
+        border-radius: 52%;
+    }
+
+    &_stem {
+        width: 0.5rem;
+        height: 20rem;
+        max-height: 10;
+        background: $lightgreen;
+
+        &::after {
+            content:  '';
+            margin-left: 0.5rem;
+            margin-top: 1rem;
+            width: 3em;
+            height: 3em;
+            display: block;
+            background: $darkgreen;
+            border-radius:  2em 0 2em 0em;
+        }
+    }
+}
+.pulse {
+    transform: scale(1);
+	animation: pulse 2s infinite;
+    color: rgb(204, 0, 255);
+}
+@keyframes pulse {
+    0% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+	}
+
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+	}
+
+	100% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	}
+}
+
+.flower {
+    position: relative;
+    top: 100px;
+    left: 100px;
+    float: left;
+    z-index: 1;
+    margin-left: 35px;
+
+    animation: grow 10s infinite linear;
+    }
+
+
+
+.flower2 {
+    position: relative;
+    top: 100px;
+    left: 400px;
+    float: left;
+    z-index: 1;
+    margin-left: 35px;
+
+    animation: grow 11s infinite linear;
+}
+
+.flower3 {
+    position: relative;
+    top: 100px;
+    left: 700px;
+    float: left;
+    z-index: 1;
+    margin-left: 35px;
+    
+    animation: grow 8s infinite linear;
+}
+
+.flower4 {
+    position: relative;
+    top: 100px;
+    left: 1000px;
+    float: left;
+    z-index: 1;
+    margin-left: 35px;
+    
+    animation: grow 6s infinite linear;
+    
+}
+    
+@keyframes grow {
+    0% {
+        top: 500px;
+    }
+    
+    50% {
+        top: 100px;
+    }
+    
+    100% {
+        top: 500px;
+    }
 }
